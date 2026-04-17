@@ -8,8 +8,8 @@ export default function InvitePage() {
       <div className="w-full max-w-[600px] rounded-2xl overflow-hidden shadow-sm bg-white">
         {/* Email body */}
         <div className="px-10 pt-8 pb-10">
-          <div className="mb-8">
-            <FinityLogo color="black" />
+          <div className="mb-8 -ml-[21px]">
+            <FinityLogo color="black" width={160} height={44} />
           </div>
 
           <h1 className="text-2xl font-semibold text-black mb-6 leading-snug">
@@ -27,7 +27,7 @@ export default function InvitePage() {
 
           <div className="flex justify-center mb-8">
             <Link href="/welcome">
-              <Button variant="primary" size="medium">
+              <Button variant="primary" size="large">
                 Activate my account
               </Button>
             </Link>
@@ -56,7 +56,7 @@ export default function InvitePage() {
         {/* Email footer */}
         <div className="bg-black px-10 py-8">
           <div className="flex items-center justify-between mb-6">
-            <FinityLogo color="white" />
+            <span className="-ml-[13px]"><FinityLogo color="white" width={100} height={26.63} /></span>
             <div className="w-7 h-7 bg-white rounded flex items-center justify-center">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" fill="#000" />
