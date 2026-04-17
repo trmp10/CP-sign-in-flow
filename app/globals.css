@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @import "./design-system.css";
-@source "../node_modules/@finity/design-system/src";
+@source "../../finity-design-system/src";
 
 :root {
   color-scheme: light;
@@ -22,66 +22,10 @@
   --color-grey-900: #171717;
 
   /* Coral */
-  --color-coral-50: #FFF4ED;
-  --color-coral-100: #FEE6D6;
-  --color-coral-200: #FCC8AC;
-  --color-coral-300: #FAA277;
-  --color-coral-400: #F77445;
-  --color-coral-500: #F44C1B;
-  --color-coral-600: #E53311;
-  --color-coral-700: #BE2310;
-  --color-coral-800: #971D15;
-  --color-coral-900: #7A1B14;
   --color-coral-finity: #FF885D;
 
-  /* Teal */
-  --color-teal-50: #F4F9F9;
-  --color-teal-100: #D9EEEC;
-  --color-teal-200: #B3DCDA;
-  --color-teal-300: #85C3C2;
-  --color-teal-400: #5AA3A4;
-  --color-teal-500: #42888A;
-  --color-teal-600: #336B6E;
-  --color-teal-700: #2C5659;
-  --color-teal-800: #274548;
-  --color-teal-900: #102023;
-  --color-teal-finity: #8FBDBE;
-
   /* Red */
-  --color-red-50: #FEF2F2;
-  --color-red-100: #FEE2E2;
-  --color-red-200: #FECACA;
-  --color-red-300: #FCA5A5;
-  --color-red-400: #F87171;
-  --color-red-500: #EF4444;
   --color-red-600: #DC2626;
-  --color-red-700: #B91C1C;
-  --color-red-800: #991B1B;
-  --color-red-900: #7F1D1D;
-
-  /* Yellow */
-  --color-yellow-50: #FEFCE8;
-  --color-yellow-100: #FEF9C3;
-  --color-yellow-200: #FEF08A;
-  --color-yellow-300: #FDE047;
-  --color-yellow-400: #FACC15;
-  --color-yellow-500: #EAB308;
-  --color-yellow-600: #CA8A04;
-  --color-yellow-700: #A16207;
-  --color-yellow-800: #854D0E;
-  --color-yellow-900: #713F12;
-
-  /* Green */
-  --color-green-50: #F0FDF4;
-  --color-green-100: #DCFCE7;
-  --color-green-200: #BBF7D0;
-  --color-green-300: #86EFAC;
-  --color-green-400: #4ADE80;
-  --color-green-500: #22C55E;
-  --color-green-600: #16A34A;
-  --color-green-700: #15803D;
-  --color-green-800: #166534;
-  --color-green-900: #14532D;
 
   /* Border */
   --color-border-subtle: #D4D4D4;
@@ -147,7 +91,17 @@
   --font-sans: var(--font-family-primary);
 }
 
-/* TextField box-shadow borders — explicit rules since Tailwind may not generate these from the symlinked design system */
+body {
+  background: var(--color-bg-default);
+  color: var(--color-text-default);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  letter-spacing: var(--letter-spacing-normal);
+  font-weight: var(--font-weight-regular);
+}
+
+/* TextField box-shadow borders — explicit rules to guarantee generation */
 .\[box-shadow\:0_0_0_1px_var\(--color-border-default\)\] {
   box-shadow: 0 0 0 1px var(--color-border-default);
 }
@@ -165,14 +119,4 @@
 }
 .\[\&\:hover\:not\(\:focus-within\)\]\:\[box-shadow\:0_0_0_2px_var\(--color-text-default\)\]:hover:not(:focus-within) {
   box-shadow: 0 0 0 2px var(--color-text-default);
-}
-
-body {
-  background: var(--color-bg-default);
-  color: var(--color-text-default);
-  font-family: var(--font-family-primary);
-  font-size: var(--font-size-body);
-  line-height: var(--line-height-body);
-  letter-spacing: var(--letter-spacing-normal);
-  font-weight: var(--font-weight-regular);
 }
