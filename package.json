@@ -9,7 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@finity/design-system": "file:../finity-design-system",
+    "@finity/design-system": "file:./vendor/finity-design-system-0.1.0.tgz",
     "next": "16.2.4",
     "react": "19.2.4",
     "react-dom": "19.2.4"
